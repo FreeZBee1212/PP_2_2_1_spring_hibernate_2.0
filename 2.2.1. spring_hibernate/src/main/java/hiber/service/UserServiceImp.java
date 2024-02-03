@@ -29,7 +29,7 @@ public class UserServiceImp implements UserService {
 
    @Transactional
    @Override
-   public void add(Car car) { userDao.add(car);}   // mb delete
+   public void add(Car car) { userDao.add(car);}
 
    @Transactional(readOnly = true)
    @Override
@@ -37,11 +37,11 @@ public class UserServiceImp implements UserService {
       return userDao.listUsers();
    }
 
-   @Autowired
-   private SessionFactory sessionFactory;
-
-
-
+   @Transactional
+   @Override
+   public User getUserByCarModelAndSeries(String model, int series){
+     return userDao.getUserByCarModelAndSeries(model, series);
+   }
 
 }
 

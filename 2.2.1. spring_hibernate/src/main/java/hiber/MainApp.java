@@ -19,26 +19,27 @@ public class MainApp {
 
       UserService userService = context.getBean(UserService.class);
 
-//      Car car1 = new Car("GTR", 600);
-//      Car car2 = new Car("BMW", 3);
-//      Car car3 = new Car("Lada", 1);
-//
-//      User user1 = new User("User1", "Lastname1", "user1@mail.ru");
-//      User user2 = new User("User1", "Lastname1", "user1@mail.ru");
-//      User user3 = new User("User1", "Lastname1", "user1@mail.ru");
-//
-//      user1.setCar(car1);
-//      userService.add(user1);
-//
-//      user2.setCar(car2);
-//      userService.add(user2);
-//
-//      user3.setCar(car3);
-//      userService.add(user3);
+      Car car1 = new Car("GTR", 600);
+      Car car2 = new Car("BMW", 3);
+      Car car3 = new Car("Lada", 1);
 
-      UserDaoImp us0 = new UserDaoImp();
-      UserServiceImp us = new UserServiceImp();
-      us0.getUserByCarModelAndSeries("GTR", "600");
+      User user1 = new User("Kolya", "Lastname1", "user1@mail.ru");
+      User user2 = new User("Petya", "Lastname2", "user2@mail.ru");
+      User user3 = new User("Rita", "Lastname3", "user3@mail.ru");
+
+      user1.setCar(car1);
+      userService.add(user1);
+
+      user2.setCar(car2);
+      userService.add(user2);
+
+      user3.setCar(car3);
+      userService.add(user3);
+
+
+      System.out.println("!!!");
+      System.out.println(userService.getUserByCarModelAndSeries("Lada", 1).toString());
+      System.out.println("!!!");
 
 
 
