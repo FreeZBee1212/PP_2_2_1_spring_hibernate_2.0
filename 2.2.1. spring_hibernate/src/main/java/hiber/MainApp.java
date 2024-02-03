@@ -38,8 +38,8 @@ public class MainApp {
 
       UserDaoImp us0 = new UserDaoImp();
       UserServiceImp us = new UserServiceImp();
-//      us0.getUserByCarModelAndSeries("GTR", "600");
-      us.getUserByCarModelAndSeries("GTR", "600");
+      us0.getUserByCarModelAndSeries("GTR", "600");
+
 
 
       List<User> users = userService.listUsers();
