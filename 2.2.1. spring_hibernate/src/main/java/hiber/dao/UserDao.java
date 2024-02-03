@@ -9,4 +9,5 @@ public interface UserDao {
    void add(Car car);                  // mb delete
    void add(User user);
    List<User> listUsers();
+   public User getUserByCarModelAndSeries(String model, String series);
 }

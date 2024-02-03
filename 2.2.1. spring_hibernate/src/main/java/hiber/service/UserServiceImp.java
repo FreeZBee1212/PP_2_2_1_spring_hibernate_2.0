@@ -6,10 +6,11 @@ import hiber.model.User;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import sun.jvm.hotspot.debugger.Address;
+
 
 import javax.persistence.TypedQuery;
 import java.util.List;
@@ -38,14 +39,8 @@ public class UserServiceImp implements UserService {
 
    @Autowired
    private SessionFactory sessionFactory;
-   public User getUserByCarModelAndSeries(String carModel, String carSeries) {
-      String hql = "SELECT u FROM User u JOIN u.car c WHERE c.model = :carModel AND c.series = :carSeries";
-      Session entityManager = null;
-      TypedQuery<User> query = entityManager.createQuery(hql, User.class);
-      query.setParameter("carModel", carModel);
-      query.setParameter("carSeries", carSeries);
-      return query.getSingleResult();
-   }
+
+
 
 
 }
