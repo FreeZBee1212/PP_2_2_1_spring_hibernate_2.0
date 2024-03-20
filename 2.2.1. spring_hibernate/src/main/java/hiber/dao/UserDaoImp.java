@@ -40,11 +40,7 @@ public class UserDaoImp implements UserDao {
       query.setParameter("series", series);
       List<User> userList = query.getResultList();
       return userList.isEmpty() ? null : userList.get(0);
-//      return query.getSingleResult();
+
    }
-
-   //SELECT u FROM User u WHERE u.car.model = :model AND u.car.series = :series
-
-
 
 }
